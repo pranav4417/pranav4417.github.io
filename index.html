@@ -17,6 +17,11 @@
     html {
       scroll-behavior: smooth;
     }
+    .parallax {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    }
   </style>
 </head>
 <body class="bg-black text-white">
@@ -34,17 +39,17 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="h-screen flex flex-col justify-center items-center text-center pt-20">
-    <img src="https://avatars.githubusercontent.com/u/4417?v=4" alt="Pranav" class="w-32 h-32 rounded-full border-4 border-blue-500 mb-6 animate-bounce">
+  <section class="h-screen flex flex-col justify-center items-center text-center pt-20 bg-[url('https://images.unsplash.com/photo-1532074205216-d0e1f4b87368?auto=format&fit=crop&w=1740&q=80')] bg-cover bg-center">
+    <img src="https://avatars.githubusercontent.com/u/4417?v=4" alt="Pranav" class="w-32 h-32 rounded-full border-4 border-blue-500 mb-6">
     <h1 class="text-5xl font-bold mb-4" id="heroText">Hi, I'm Pranav 👋</h1>
-    <p class="text-xl text-gray-400">Full Stack Dev • Cloud Curious • Compiler Tamer</p>
+    <p class="text-xl text-white backdrop-blur-sm bg-black bg-opacity-30 px-4 py-2 rounded">Java Fan • Swift Curious • Spring Ready • Security Committed</p>
   </section>
 
   <!-- About Section -->
   <section class="min-h-screen px-10 py-20 bg-gray-900" id="about">
     <h2 class="text-4xl font-bold mb-6">About Me</h2>
     <p class="text-gray-300 max-w-2xl text-lg leading-relaxed">
-      I'm a CSE student who blends caffeine with code. I build beautiful, performant web experiences, explore the depths of cloud computing, and even tame compilers for fun. I believe tech should not just work — it should wow.
+      I'm a CSE student deeply invested in building strong, secure, and elegant software. Skilled in Java (including Hibernate and Spring Boot), Android Studio (Java), and a beginner in iOS using Swift. Cryptography and system security are my fuel, and I love transforming ideas into scalable systems.
     </p>
   </section>
 
@@ -53,28 +58,21 @@
     <h2 class="text-4xl font-bold mb-10">Projects</h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+        <img src="https://repository-images.githubusercontent.com/4417/portfolio.png" alt="Portfolio Screenshot" class="rounded mb-4">
         <h3 class="text-2xl font-semibold mb-2">Personal Portfolio</h3>
         <p class="text-gray-400">A sleek, animated portfolio site built with Tailwind and GSAP, hosted for free on GitHub Pages.</p>
         <a href="https://pranav4417.github.io" target="_blank" class="text-blue-400 underline mt-2 block">View Live</a>
       </div>
       <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+        <img src="https://placehold.co/400x200?text=Compiler+Simulator" alt="Compiler Design Screenshot" class="rounded mb-4">
         <h3 class="text-2xl font-semibold mb-2">Compiler Design Simulator</h3>
         <p class="text-gray-400">Lexical and syntax analyzer simulator coded in C with visual outputs and demo input file support.</p>
         <a href="#" class="text-blue-400 underline mt-2 block">GitHub Repo</a>
       </div>
       <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+        <img src="https://placehold.co/400x200?text=Cloud+Storage" alt="Cloud Storage Screenshot" class="rounded mb-4">
         <h3 class="text-2xl font-semibold mb-2">Cloud Storage Manager</h3>
-        <p class="text-gray-400">A cloud-integrated tool that allows uploading, organizing, and retrieving files via a web UI using AWS S3.</p>
-        <a href="#" class="text-blue-400 underline mt-2 block">GitHub Repo</a>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
-        <h3 class="text-2xl font-semibold mb-2">Weather App</h3>
-        <p class="text-gray-400">A React-based app that shows live weather info using OpenWeatherMap API, styled with Tailwind.</p>
-        <a href="#" class="text-blue-400 underline mt-2 block">GitHub Repo</a>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
-        <h3 class="text-2xl font-semibold mb-2">Data Visualizer</h3>
-        <p class="text-gray-400">Interactive dashboard built with Python + Streamlit, used to visualize CSV data with graphs.</p>
+        <p class="text-gray-400">Tool to upload, organize, and retrieve files via a web UI using AWS S3.</p>
         <a href="#" class="text-blue-400 underline mt-2 block">GitHub Repo</a>
       </div>
     </div>
