@@ -27,6 +27,7 @@
       <h1 class="text-xl font-bold">Pranav</h1>
       <ul class="flex space-x-6">
         <li><a href="#about" class="hover:text-blue-400">About</a></li>
+        <li><a href="#projects" class="hover:text-blue-400">Projects</a></li>
         <li><a href="#contact" class="hover:text-blue-400">Message</a></li>
       </ul>
     </div>
@@ -45,6 +46,38 @@
     <p class="text-gray-300 max-w-2xl text-lg leading-relaxed">
       I'm a CSE student who blends caffeine with code. I build beautiful, performant web experiences, explore the depths of cloud computing, and even tame compilers for fun. I believe tech should not just work — it should wow.
     </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="min-h-screen px-10 py-20 bg-gray-950" id="projects">
+    <h2 class="text-4xl font-bold mb-10">Projects</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+        <h3 class="text-2xl font-semibold mb-2">Personal Portfolio</h3>
+        <p class="text-gray-400">A sleek, animated portfolio site built with Tailwind and GSAP, hosted for free on GitHub Pages.</p>
+        <a href="https://pranav4417.github.io" target="_blank" class="text-blue-400 underline mt-2 block">View Live</a>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+        <h3 class="text-2xl font-semibold mb-2">Compiler Design Simulator</h3>
+        <p class="text-gray-400">Lexical and syntax analyzer simulator coded in C with visual outputs and demo input file support.</p>
+        <a href="#" class="text-blue-400 underline mt-2 block">GitHub Repo</a>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+        <h3 class="text-2xl font-semibold mb-2">Cloud Storage Manager</h3>
+        <p class="text-gray-400">A cloud-integrated tool that allows uploading, organizing, and retrieving files via a web UI using AWS S3.</p>
+        <a href="#" class="text-blue-400 underline mt-2 block">GitHub Repo</a>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+        <h3 class="text-2xl font-semibold mb-2">Weather App</h3>
+        <p class="text-gray-400">A React-based app that shows live weather info using OpenWeatherMap API, styled with Tailwind.</p>
+        <a href="#" class="text-blue-400 underline mt-2 block">GitHub Repo</a>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+        <h3 class="text-2xl font-semibold mb-2">Data Visualizer</h3>
+        <p class="text-gray-400">Interactive dashboard built with Python + Streamlit, used to visualize CSV data with graphs.</p>
+        <a href="#" class="text-blue-400 underline mt-2 block">GitHub Repo</a>
+      </div>
+    </div>
   </section>
 
   <!-- Contact Form -->
@@ -76,6 +109,14 @@
       scrollTrigger: "#about",
       duration: 1.5,
       y: 100,
+      opacity: 0,
+      ease: "power3.out"
+    });
+
+    gsap.from("#projects", {
+      scrollTrigger: "#projects",
+      duration: 1.5,
+      x: 100,
       opacity: 0,
       ease: "power3.out"
     });
