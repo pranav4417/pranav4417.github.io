@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pranav Kandakurthi | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-- Hero Section -->
+  <section class="h-screen flex flex-col justify-center items-center text-center">
+    <h1 class="text-5xl font-bold mb-4" id="heroText">Hi, I'm Pranav 👋</h1>
+    <p class="text-xl text-gray-400">Full Stack Dev • Cloud Curious • Compiler Tamer</p>
+  </section>
+
+  <!-- About Section -->
+  <section class="min-h-screen px-10 py-20 bg-gray-900" id="about">
+    <h2 class="text-3xl font-bold mb-4">About Me</h2>
+    <p class="text-gray-300 max-w-xl">
+      I'm a CSE student who blends caffeine with code, passionate about cloud tech and compiler design. I love building stuff that works beautifully and performs smoothly.
+    </p>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="min-h-screen px-10 py-20 bg-gray-800" id="contact">
+    <h2 class="text-3xl font-bold mb-4">Message Me</h2>
+    <form action="https://formspree.io/f/mnnvdzao" method="POST" class="max-w-md space-y-4">
+      <input type="text" name="name" placeholder="Your Name" class="w-full p-2 bg-gray-700 rounded" required>
+      <input type="email" name="email" placeholder="Your Email" class="w-full p-2 bg-gray-700 rounded" required>
+      <textarea name="message" placeholder="Your Message" rows="5" class="w-full p-2 bg-gray-700 rounded" required></textarea>
+      <button type="submit" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded">Send</button>
+    </form>
+  </section>
+
+  <script>
+    gsap.from("#heroText", {
+      duration: 1.5,
+      y: -100,
+      opacity: 0,
+      ease: "bounce.out"
+    });
+  </script>
+
+</body>
+</html>
