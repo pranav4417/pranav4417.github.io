@@ -17,11 +17,6 @@
     html {
       scroll-behavior: smooth;
     }
-    .parallax {
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
-    }
   </style>
 </head>
 <body class="bg-black text-white">
@@ -29,7 +24,7 @@
   <!-- Navbar -->
   <nav class="fixed top-0 w-full bg-black bg-opacity-80 text-white z-50 shadow-lg">
     <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <h1 class="text-xl font-bold">Pranav</h1>
+      <h1 class="text-xl font-bold">Pranav Kandakurthi</h1>
       <ul class="flex space-x-6">
         <li><a href="#about" class="hover:text-blue-400">About</a></li>
         <li><a href="#projects" class="hover:text-blue-400">Projects</a></li>
@@ -40,17 +35,25 @@
 
   <!-- Hero Section -->
   <section class="h-screen flex flex-col justify-center items-center text-center pt-20 bg-[url('https://images.unsplash.com/photo-1532074205216-d0e1f4b87368?auto=format&fit=crop&w=1740&q=80')] bg-cover bg-center">
-    <img src="https://avatars.githubusercontent.com/u/4417?v=4" alt="Pranav" class="w-32 h-32 rounded-full border-4 border-blue-500 mb-6">
-    <h1 class="text-5xl font-bold mb-4" id="heroText">Hi, I'm Pranav 👋</h1>
-    <p class="text-xl text-white backdrop-blur-sm bg-black bg-opacity-30 px-4 py-2 rounded">Java Fan • Swift Curious • Spring Ready • Security Committed</p>
+    <img src="https://avatars.githubusercontent.com/u/4417?v=4" alt="Pranav" class="w-32 h-32 rounded-full border-4 border-blue-500 mb-6" style="animation: none;">
+    <h1 class="text-5xl font-bold mb-4" id="heroText">Hello, I am Pranav Kandakurthi</h1>
+    <p class="text-xl text-white backdrop-blur-sm bg-black bg-opacity-30 px-4 py-2 rounded">Passionate in Java • Exploring Swift • Building Secure Systems</p>
   </section>
 
   <!-- About Section -->
   <section class="min-h-screen px-10 py-20 bg-gray-900" id="about">
     <h2 class="text-4xl font-bold mb-6">About Me</h2>
-    <p class="text-gray-300 max-w-2xl text-lg leading-relaxed">
-      I'm a CSE student deeply invested in building strong, secure, and elegant software. Skilled in Java (including Hibernate and Spring Boot), Android Studio (Java), and a beginner in iOS using Swift. Cryptography and system security are my fuel, and I love transforming ideas into scalable systems.
-    </p>
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="text-gray-300 text-lg leading-relaxed">
+          I am a Computer Science student with a keen interest in developing robust, scalable, and secure applications. My primary focus lies in Java development, especially Spring Boot and Hibernate, while I also enjoy exploring Swift and iOS development. I'm actively expanding my skill set in cloud technologies and system-level security.
+        </p>
+        <p class="text-gray-300 text-lg leading-relaxed mt-4">
+          With a foundation built on curiosity and commitment to excellence, I aim to contribute to meaningful projects that make technology accessible and impactful. My areas of interest also include DevSecOps, API design, and database optimization.
+        </p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&q=80" alt="About Me Image" class="rounded shadow-lg">
+    </div>
   </section>
 
   <!-- Projects Section -->
@@ -60,19 +63,19 @@
       <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
         <img src="https://repository-images.githubusercontent.com/4417/portfolio.png" alt="Portfolio Screenshot" class="rounded mb-4">
         <h3 class="text-2xl font-semibold mb-2">Personal Portfolio</h3>
-        <p class="text-gray-400">A sleek, animated portfolio site built with Tailwind and GSAP, hosted for free on GitHub Pages.</p>
+        <p class="text-gray-400">An animated portfolio website crafted with Tailwind CSS and GSAP animations, hosted via GitHub Pages.</p>
         <a href="https://pranav4417.github.io" target="_blank" class="text-blue-400 underline mt-2 block">View Live</a>
       </div>
       <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
         <img src="https://placehold.co/400x200?text=Compiler+Simulator" alt="Compiler Design Screenshot" class="rounded mb-4">
         <h3 class="text-2xl font-semibold mb-2">Compiler Design Simulator</h3>
-        <p class="text-gray-400">Lexical and syntax analyzer simulator coded in C with visual outputs and demo input file support.</p>
+        <p class="text-gray-400">A tool built in C for simulating lexical and syntax analysis with user-defined input support and visual output.</p>
         <a href="#" class="text-blue-400 underline mt-2 block">GitHub Repo</a>
       </div>
       <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
         <img src="https://placehold.co/400x200?text=Cloud+Storage" alt="Cloud Storage Screenshot" class="rounded mb-4">
         <h3 class="text-2xl font-semibold mb-2">Cloud Storage Manager</h3>
-        <p class="text-gray-400">Tool to upload, organize, and retrieve files via a web UI using AWS S3.</p>
+        <p class="text-gray-400">A web application to manage file uploads and retrievals using AWS S3 storage with secure API endpoints.</p>
         <a href="#" class="text-blue-400 underline mt-2 block">GitHub Repo</a>
       </div>
     </div>
@@ -90,22 +93,22 @@
   </section>
 
   <footer class="bg-black text-center text-sm py-6 border-t border-gray-700">
-    © 2025 Pranav Kandakurthi. Built with ❤️ + GSAP + Tailwind
+    © 2025 Pranav Kandakurthi. Built with ❤️ using GSAP & Tailwind CSS
   </footer>
 
   <script>
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.from("#heroText", {
-      duration: 1.5,
-      y: -100,
+      duration: 1.2,
       opacity: 0,
-      ease: "bounce.out"
+      y: -50,
+      ease: "power2.out"
     });
 
     gsap.from("#about", {
       scrollTrigger: "#about",
-      duration: 1.5,
+      duration: 1.2,
       y: 100,
       opacity: 0,
       ease: "power3.out"
@@ -113,7 +116,7 @@
 
     gsap.from("#projects", {
       scrollTrigger: "#projects",
-      duration: 1.5,
+      duration: 1.2,
       x: 100,
       opacity: 0,
       ease: "power3.out"
@@ -121,7 +124,7 @@
 
     gsap.from("#contact", {
       scrollTrigger: "#contact",
-      duration: 1.5,
+      duration: 1.2,
       x: -100,
       opacity: 0,
       ease: "power3.out"
